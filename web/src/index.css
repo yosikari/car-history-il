@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  margin: 0;
+  background: theme("colors.canvas");
+  color: theme("colors.ink");
+  /* Hebrew gets Heebo; Latin/numerals get Inter — both loaded in index.html. */
+  font-family: "Heebo", "Inter", ui-sans-serif, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+@layer utilities {
+  .num {
+    font-family: "Inter", ui-sans-serif, sans-serif;
+    font-feature-settings: "tnum";
+  }
+}

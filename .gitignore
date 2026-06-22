@@ -1,0 +1,11 @@
+node_modules/
+web/node_modules/
+dist/
+public/
+.cache/
+*.log
+report.html
+report.pdf
+pkgs.json
+probe.json
+.env

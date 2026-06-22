@@ -1,0 +1,35 @@
+{
+  "name": "vehicle-insight-engine",
+  "version": "1.0.0",
+  "description": "End-to-end Israeli vehicle report engine over data.gov.il open data with pluggable lien/accident providers.",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "bin": {
+    "vehicle-insight": "dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/cli.js",
+    "dev": "node --import tsx/esm src/cli.ts",
+    "serve": "node --import tsx/esm src/api/server.ts",
+    "test": "node --import tsx/esm --test tests/**/*.test.ts",
+    "report": "node --import tsx/esm src/cli.ts",
+    "web:install": "npm --prefix web install",
+    "web:dev": "npm --prefix web run dev",
+    "web:build": "npm --prefix web run build",
+    "build:all": "npm run build && npm run web:build"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^22.5.0",
+    "playwright": "^1.61.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.5.4"
+  }
+}
